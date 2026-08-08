@@ -1,0 +1,120 @@
+:root {
+    --accent: #2962FF;
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --text: #1A1A1A;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --transition: 0.25s ease;
+}
+
+body.dark {
+    --bg: #121212;
+    --surface: #1E1E1E;
+    --text: #E0E0E0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background var(--transition), color var(--transition);
+}
+
+.app-header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.subtitle {
+    opacity: 0.8;
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.card {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: background var(--transition), box-shadow var(--transition);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: var(--radius);
+    border: 1px solid #CCC;
+    background: var(--bg);
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background var(--transition), transform var(--transition);
+}
+
+button:hover {
+    background: #1E4ED8;
+    transform: translateY(-2px);
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #0F0F0F10;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+}
+
+#output {
+    font-size: 1.2rem;
+    word-break: break-all;
+}
+
+.strength {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+}

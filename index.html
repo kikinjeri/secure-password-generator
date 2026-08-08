@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Password Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+    <h1>Enterprise Password Generator</h1>
+    <p class="subtitle">Material Design 3 • Crypto‑Secure • Offline</p>
+</header>
+
+<main class="app-main">
+
+    <section class="card">
+        <h2>Password Settings</h2>
+
+        <label for="length">Password length (15–50)</label>
+        <input type="number" id="length" min="15" max="50" value="20">
+
+        <div class="actions">
+            <button id="generateBtn">Generate Password</button>
+            <button id="regenBtn">Regenerate</button>
+            <button id="multiBtn">Generate 5 Passwords</button>
+        </div>
+    </section>
+
+    <section class="card output-section">
+        <h2>Your Password</h2>
+
+        <div class="password-box">
+            <span id="output"></span>
+            <button id="toggleVisibility" aria-label="Toggle visibility">👁️</button>
+        </div>
+
+        <p id="strength" class="strength"></p>
+
+        <div class="actions">
+            <button id="copyBtn">Copy</button>
+            <button id="saveBtn">Save to File</button>
+        </div>
+    </section>
+
+    <section class="card" id="multiOutputSection" hidden>
+        <h2>Generated Passwords (5)</h2>
+        <ul id="multiList"></ul>
+    </section>
+
+</main>
+
+<footer class="app-footer">
+    <p>Fully offline • No tracking • No storage</p>
+    <button id="themeToggle">Toggle Dark/Light</button>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
