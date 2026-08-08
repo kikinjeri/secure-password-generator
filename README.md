@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔐 High‑Entropy Password Generator
 
 A modern, offline‑first password generator that produces **high‑entropy cryptographic passwords** using secure randomness from the browser’s native `crypto.getRandomValues()` API. Designed for personal use, this tool focuses on security, simplicity, and a vibrant, premium interface.
@@ -113,3 +114,7 @@ This generator uses **cryptographically secure entropy** and avoids predictable 
 
 MIT License — free for personal and educational use.
 
+=======
+# secure-password-generator
+A modern, offline, high‑entropy password generator that produces cryptographically secure, uncrackable credentials with a clean, enterprise‑grade UI.
+>>>>>>> 026019b27bb4e4dafcda678f2338481f22ad19f9
